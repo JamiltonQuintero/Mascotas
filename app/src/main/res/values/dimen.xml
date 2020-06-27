@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="bordes_imagen">20sp</dimen>
+    <dimen name="tamaño_i_likes">40dp</dimen>
+
+</resources>

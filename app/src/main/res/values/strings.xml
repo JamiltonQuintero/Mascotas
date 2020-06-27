@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="nombre_mascota">n Mascota</string>
+    <string name="cantidad_likes"># likes</string>
+    <string name="n_m_favorita">Mascota favorita</string>
+</resources>
