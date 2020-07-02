@@ -1,8 +1,6 @@
-package com.jamilton.mascotas;
+package com.jamilton.mascotas.adapter;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,21 +10,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.appcompat.view.menu.MenuView;
-import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.jamilton.mascotas.pojo.Mascotas;
+import com.jamilton.mascotas.R;
 
 import java.util.ArrayList;
 
+
+
 public class ContAdaptador extends RecyclerView.Adapter<ContAdaptador.ContactoViewHolder> {
-    ArrayList<Mascotas>mascotas;
+    ArrayList<Mascotas> mascotas;
     Activity activity;
 
-    public ContAdaptador (ArrayList<Mascotas> mascotas, Activity activity) {
+    public ContAdaptador(ArrayList<Mascotas> mascotas, FragmentActivity activity) {
         this.mascotas = mascotas;
         this.activity = activity;
+
     }
+
+
 
     @NonNull
     @Override
@@ -48,28 +53,14 @@ public class ContAdaptador extends RecyclerView.Adapter<ContAdaptador.ContactoVi
         contactoViewholder.cLikes.setImageResource(mascota.getImagenHue());
 
 
-
-
         contactoViewholder.bLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, mascota.getnMascota()+ " a sido agregado a tus favortitos",Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, mascota.getnMascota() + " a sido agregado a tus favortitos", Toast.LENGTH_SHORT).show();
             }
         });
 
-/*
 
-        contactoViewholder.bFavoritos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(activity,mascota.getnMascota(),Toast.LENGTH_SHORT).show();
-
-                Intent  inten = new Intent(activity, Favoritas.class);
-                activity.startActivity(inten);
-            }
-        });
-
-*/
     }
 
     @Override
@@ -88,12 +79,13 @@ public class ContAdaptador extends RecyclerView.Adapter<ContAdaptador.ContactoVi
 
 
             imgMascota = itemView.findViewById(R.id.imgMascotas);
+
             tvnMascotas = itemView.findViewById(R.id.tvnombreMascotaCV);
             tvcanLikes = itemView.findViewById(R.id.tvcanLikesCV);
             bLike = itemView.findViewById(R.id.bLike);
-            //bFavoritos = itemView.findViewById(R.id.bFavoritos);
             cLikes = itemView.findViewById(R.id.cLikes);
         }
     }
 
 }
+

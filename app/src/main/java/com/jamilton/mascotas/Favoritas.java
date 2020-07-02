@@ -5,17 +5,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.jamilton.mascotas.adapter.ContAdaptador;
+import com.jamilton.mascotas.pojo.Mascotas;
 
 import java.util.ArrayList;
 
 public class Favoritas extends AppCompatActivity {
 
-    private TextView tvM1Favorita;
     ArrayList<Mascotas>mascotas;
     private RecyclerView lstMascotas;
 
@@ -25,14 +24,17 @@ public class Favoritas extends AppCompatActivity {
         setContentView(R.layout.activity_favoritas);
 
 
+
+
+
         Toolbar mitoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mitoolbar);
         getSupportActionBar().setTitle("Tus Favoritas");
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         lstMascotas = findViewById(R.id.rvMascotas);
-
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
 
@@ -45,7 +47,6 @@ public class Favoritas extends AppCompatActivity {
 
 
     }
-
 
 
 
@@ -62,8 +63,6 @@ public class Favoritas extends AppCompatActivity {
         mascotas.add(new Mascotas("Roky","0",R.drawable.m1,R.drawable.clikes));
         mascotas.add(new Mascotas("July","0",R.drawable.m6,R.drawable.clikes));
         mascotas.add(new Mascotas("Luna","0",R.drawable.m3,R.drawable.clikes));
-        mascotas.add(new Mascotas("Chachis","0",R.drawable.m4,R.drawable.clikes));
-        mascotas.add(new Mascotas("Pepa","0",R.drawable.m5,R.drawable.clikes));
     }
 
 
