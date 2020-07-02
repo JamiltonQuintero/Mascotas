@@ -3,5 +3,6 @@
 
     <dimen name="bordes_imagen">20sp</dimen>
     <dimen name="tamaño_i_likes">40dp</dimen>
+    <dimen name="laterales">16dp</dimen>
 
 </resources>
