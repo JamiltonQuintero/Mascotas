@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MascotasMainActivity">
+    tools:context=".Mains.MascotasMainActivity">
 
   <include
       android:id="@+id/toolbar"
@@ -22,11 +22,11 @@
               android:id="@+id/tabLayout"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              app:tabBackground="@color/colorPrimary"
-              app:tabIndicatorColor="@color/white"
+              app:tabBackground="@color/pink"
+              app:tabIndicatorColor="@color/black"
               app:tabTextColor="@color/lighGray"
-              app:tabSelectedTextColor="@color/white"
-              app:tabRippleColor="@color/colorPrimaryDark"
+              app:tabSelectedTextColor="@color/black"
+              app:tabRippleColor="@color/black"
 
               >
 

@@ -36,7 +36,7 @@ public class ContAdapterMiMascota extends RecyclerView.Adapter<ContAdapterMiMasc
         final MiMascotaM mimascota = miMascota.get(position);
         holder.imgMiMascota.setImageResource(mimascota.getImagen());
         holder.cLikesMM.setImageResource(mimascota.getImagenHue());
-        holder.tvcanLikesMM.setText(mimascota.getNumLikes());
+        holder.tvcanLikesMM.setText(String.valueOf(mimascota.tNumLikes()));
 
     }
 

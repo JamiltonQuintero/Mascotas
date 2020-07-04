@@ -4,23 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Favoritas"
+    tools:context=".Mains.Favoritas"
     android:background="@color/pinkkk">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMascotas"
+        >
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutFv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/pink"
+            app:tabIndicatorColor="@color/black"
+            app:tabTextColor="@color/lighGray"
+            app:tabSelectedTextColor="@color/black"
+            app:tabRippleColor="@color/black"
+
+            >
+
+        </com.google.android.material.tabs.TabLayout>
 
 
-        </androidx.recyclerview.widget.RecyclerView>
+
     </LinearLayout>
+    <include layout="@layout/content_main" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

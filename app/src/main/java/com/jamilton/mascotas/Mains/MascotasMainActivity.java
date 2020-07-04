@@ -1,4 +1,4 @@
-package com.jamilton.mascotas;
+package com.jamilton.mascotas.Mains;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,7 +13,11 @@ import android.view.MenuItem;
 import com.google.android.material.tabs.TabLayout;
 
 
+import com.jamilton.mascotas.ActivityAcercaDe;
+import com.jamilton.mascotas.ActivityContacto;
+import com.jamilton.mascotas.R;
 import com.jamilton.mascotas.adapter.PageAdapter;
+import com.jamilton.mascotas.Mains.Favoritas;
 import com.jamilton.mascotas.fragments.MiMascota;
 import com.jamilton.mascotas.fragments.ReciclerFragment;
 
@@ -41,6 +45,8 @@ public class MascotasMainActivity extends AppCompatActivity {
        setUpViewPager();
 
 
+
+       
 
     if (mitoolbar != null){
         setSupportActionBar(mitoolbar);
@@ -92,7 +98,7 @@ public class MascotasMainActivity extends AppCompatActivity {
        public boolean onOptionsItemSelected(MenuItem menuItem){
         switch (menuItem.getItemId()){
             case R.id.bFavoritos:
-                Intent intent =new Intent(this,Favoritas.class);
+                Intent intent =new Intent(this, Favoritas.class);
                 startActivity(intent);
                 break;
 

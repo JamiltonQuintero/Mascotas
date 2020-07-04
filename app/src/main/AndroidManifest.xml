@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityAcercaDe"
-            android:parentActivityName=".MascotasMainActivity">
+            android:parentActivityName=".Mains.MascotasMainActivity">
 
         </activity>
         <activity android:name=".ActivityContacto"
-            android:parentActivityName=".MascotasMainActivity"/>
+            android:parentActivityName=".Mains.MascotasMainActivity"/>
         <activity
-            android:name=".MascotasMainActivity"
+            android:name=".Mains.MascotasMainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,12 +26,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Favoritas"
+            android:name=".Mains.Favoritas"
             android:label="Favoritas"
-            android:parentActivityName=".MascotasMainActivity">
+            android:parentActivityName=".Mains.MascotasMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MascotasMainActivity" />
+                android:value=".Mains.MascotasMainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.Favoritas" />

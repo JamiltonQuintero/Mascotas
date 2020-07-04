@@ -1,14 +1,22 @@
 package com.jamilton.mascotas.pojo;
 
 public class MiMascotaM {
-    private String numLikes;
-    private int imagen, imagenHue;
 
-    public String getNumLikes() {
+    private int imagen, imagenHue,numLikes;
+
+
+
+    public MiMascotaM(int numLikes, int imagen, int imagenHue) {
+        this.numLikes = numLikes;
+        this.imagen = imagen;
+        this.imagenHue = imagenHue;
+    }
+
+    public int tNumLikes() {
         return numLikes;
     }
 
-    public void setNumLikes(String numLikes) {
+    public void setNumLikes(int numLikes) {
         this.numLikes = numLikes;
     }
 
@@ -25,12 +33,6 @@ public class MiMascotaM {
     }
 
     public void setImagenHue(int imagenHue) {
-        this.imagenHue = imagenHue;
-    }
-
-    public MiMascotaM(String numLikes, int imagen, int imagenHue) {
-        this.numLikes = numLikes;
-        this.imagen = imagen;
         this.imagenHue = imagenHue;
     }
 }
