@@ -8,12 +8,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.jamilton.mascotas.db.ConstructorDeMascotas;
 import com.jamilton.mascotas.pojo.Mascotas;
 import com.jamilton.mascotas.R;
 
@@ -44,19 +42,27 @@ public class ContAdaptador extends RecyclerView.Adapter<ContAdaptador.ContactoVi
 
     // asocia cada elemento de la lista con cada view
     @Override
-    public void onBindViewHolder(@NonNull ContactoViewHolder contactoViewholder, int position) {
+    public void onBindViewHolder(@NonNull final ContactoViewHolder contactoViewholder, int position) {
 
         final Mascotas mascota = mascotas.get(position);
         contactoViewholder.imgMascota.setImageResource(mascota.getImagen());
         contactoViewholder.tvnMascotas.setText(mascota.getnMascota());
-        contactoViewholder.tvcanLikes.setText(mascota.getNumLikes());
+        contactoViewholder.tvcanLikes.setText(String.valueOf(mascota.getNumLikes())+" Likes");
         contactoViewholder.cLikes.setImageResource(mascota.getImagenHue());
+
 
 
         contactoViewholder.bLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, mascota.getnMascota() + " a sido agregado a tus favortitos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, " Diste Like a "+ mascota.getnMascota(), Toast.LENGTH_SHORT).show();
+
+                ConstructorDeMascotas constructorDeMascotas = new ConstructorDeMascotas(activity);
+                constructorDeMascotas.darLikeMascota(mascota);
+
+                contactoViewholder.tvcanLikes.setText(String.valueOf(constructorDeMascotas.obtenerCLikesMascotas(mascota))+" Likes");
+
+
             }
         });
 
@@ -79,7 +85,6 @@ public class ContAdaptador extends RecyclerView.Adapter<ContAdaptador.ContactoVi
 
 
             imgMascota = itemView.findViewById(R.id.imgMascotas);
-
             tvnMascotas = itemView.findViewById(R.id.tvnombreMascotaCV);
             tvcanLikes = itemView.findViewById(R.id.tvcanLikesCV);
             bLike = itemView.findViewById(R.id.bLike);

@@ -14,12 +14,15 @@ import android.view.ViewGroup;
 import com.jamilton.mascotas.R;
 import com.jamilton.mascotas.adapter.ContAdaptador;
 import com.jamilton.mascotas.pojo.Mascotas;
+import com.jamilton.mascotas.presentador.IRecyclerViewFragmentPresenter;
+import com.jamilton.mascotas.presentador.RecyclerViewFragmentPresenter;
 
 import java.util.ArrayList;
 
-public class ReciclerFragment extends Fragment {
+public class ReciclerFragment extends Fragment implements IReciclerViewFragmentView{
 
     ArrayList<Mascotas> mascotas;
+    private IRecyclerViewFragmentPresenter presenter;
     private RecyclerView lstMascotas;
 
     public ReciclerFragment() {
@@ -28,35 +31,30 @@ public class ReciclerFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_recicler,container,false);
-
         lstMascotas = view.findViewById(R.id.rvMascotas);
+        presenter = new RecyclerViewFragmentPresenter(this,getContext());
+        return view;
 
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         lstMascotas.setLayoutManager(llm);
-        ILDeMascotas();
-        iniAdaptador();
-
-        return view;
     }
-    //public ContAdaptador adaptador;
-    public void iniAdaptador(){
-        //adaptador = new ContAdaptador(mascotas, this);
+
+    @Override
+    public ContAdaptador crearAdaptador(ArrayList<Mascotas> mascotas) {
         ContAdaptador adaptador = new ContAdaptador(mascotas,getActivity());
-        lstMascotas.setAdapter(adaptador);
+        return adaptador;
     }
 
-    public void ILDeMascotas(){
-        mascotas = new ArrayList<>();
-
-        mascotas.add(new Mascotas("Roky","0",R.drawable.m1,R.drawable.clikes));
-        mascotas.add(new Mascotas("July","0",R.drawable.m6,R.drawable.clikes));
-        mascotas.add(new Mascotas("Luna","0",R.drawable.m3,R.drawable.clikes));
-        mascotas.add(new Mascotas("Chachis","0",R.drawable.m4,R.drawable.clikes));
-        mascotas.add(new Mascotas("Pepa","0",R.drawable.m5,R.drawable.clikes));
+    @Override
+    public void inicializarAdaptadorRV(ContAdaptador adaptador) {
+        lstMascotas.setAdapter(adaptador);
     }
 }
