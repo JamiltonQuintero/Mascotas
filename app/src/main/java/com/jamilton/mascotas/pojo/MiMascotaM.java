@@ -2,38 +2,55 @@ package com.jamilton.mascotas.pojo;
 
 public class MiMascotaM {
 
-    private int imagen, imagenHue,numLikes;
+    private String urlImagen;// imagenHue,numLikes;
+    private String idM;
+    private String nombreCompleto;
+    private String fecha;
 
 
 
-    public MiMascotaM(int numLikes, int imagen, int imagenHue) {
-        this.numLikes = numLikes;
-        this.imagen = imagen;
-        this.imagenHue = imagenHue;
+    public MiMascotaM(String urlImagen, String idM, String nombreCompleto, String fecha) {
+        this.urlImagen = urlImagen;
+        this.idM = idM;
+        this.nombreCompleto = nombreCompleto;
+        this.fecha= fecha;
     }
 
-    public int tNumLikes() {
-        return numLikes;
+    public MiMascotaM() {
+
     }
 
-    public void setNumLikes(int numLikes) {
-        this.numLikes = numLikes;
+    public String getUrlImagen() {
+        return urlImagen;
     }
 
-    public int getImagen() {
-        return imagen;
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
     }
 
-    public void setImagen(int imagen) {
-        this.imagen = imagen;
+    public String getIdM() {
+        return idM;
     }
 
-    public int getImagenHue() {
-        return imagenHue;
+    public void setIdM(String id) {
+        this.idM = idM;
     }
 
-    public void setImagenHue(int imagenHue) {
-        this.imagenHue = imagenHue;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
 }
 

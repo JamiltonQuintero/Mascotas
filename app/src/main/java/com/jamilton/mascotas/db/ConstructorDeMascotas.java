@@ -2,6 +2,7 @@ package com.jamilton.mascotas.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.widget.Toast;
 
 import com.jamilton.mascotas.R;
 import com.jamilton.mascotas.pojo.Mascotas;
@@ -23,8 +24,9 @@ public class ConstructorDeMascotas {
 
     public ArrayList<Mascotas> obtenerFavoritas(){
 
-        miMascotasFv = obtenerDatos();
-        return miMascotasFv;
+
+            miMascotasFv = obtenerDatos();
+            return miMascotasFv;
     }
 
 

@@ -31,7 +31,6 @@ public class RecyclerMisFavoritosPresenter implements IRecyclerMisFavoritasPrese
         Collections.sort(miMascotasFv);
         mostrarMascotaRVFv();
 
-
     }
 
     @Override

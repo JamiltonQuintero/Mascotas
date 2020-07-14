@@ -12,12 +12,17 @@
     >
 
 
+
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        cardview:layout_constraintBottom_toBottomOf="parent"
         cardview:layout_constraintEnd_toEndOf="parent"
         cardview:layout_constraintStart_toStartOf="parent"
-        android:gravity="center">
+        cardview:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -28,8 +33,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/pinkkk">
+                android:background="@color/pinkkk"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imgMiMascotas"
@@ -46,18 +51,10 @@
 
 
                     <TextView
-                        android:id="@+id/tvcanLikesCVMM"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingHorizontal="10dp"
-                        android:paddingLeft="@dimen/bordes_imagen"
-                        android:text="@string/cantidad_likes" />
-
-                    <ImageView
-                        android:id="@+id/cLikesMM"
-                        android:layout_width="@dimen/tamaño_i_likes"
+                        android:id="@+id/fecha"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        app:srcCompat="@drawable/clikes" />
+                        android:text="@string/fecha_subida" />
 
 
                 </LinearLayout>

@@ -12,6 +12,9 @@
     <string name="menu_ver">Ver Imagen</string>
     <string name="menu_ver_detalle">ver Detalles</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fecha_subida">Cuandose monto</string>
+    <string name="username_nomrbe">Nombre Completo</string>
+
 
     <string name="tiNombre">Nombre</string>
     <string name="tiCorreo">Correo Electronico</string>
@@ -21,4 +24,8 @@
     <string name="acerca_de">ACERCA DE MI</string>
     <string name="acerca_de_descripcion">Me encanca la programacion,
                                          Es mi pasion y quiero ser el mejor.</string>
+
+    <string name="tvconfi_cuenta">MASCOTAS</string>
+    <string name="buscar_usiario">Escribe tu Usuario</string>
+    <string name="btn_cuenta">Guardar Cuenta</string>
 </resources>
