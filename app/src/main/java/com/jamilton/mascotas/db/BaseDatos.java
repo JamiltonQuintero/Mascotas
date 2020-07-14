@@ -70,6 +70,9 @@ public class BaseDatos extends SQLiteOpenHelper {
                                 " WHERE " + ConstantesBaseDeDatos.TABLE_LIKES_MASCOTAS_ID_MASCOTA + "=" + mascotaActual.getId();
 
             Cursor registrosLikes = sqLiteDatabase.rawQuery(queryLikes, null);
+
+
+
             if (registrosLikes.moveToNext()){
                 mascotaActual.setNumLikes(registrosLikes.getInt(0));
 

@@ -39,7 +39,7 @@ public class ContAdapterMisFavoritas extends RecyclerView.Adapter<ContAdapterMis
      final Mascotas miMascotaFv = mascotasFv.get(position);
      holder.imgMascotafv.setImageResource(miMascotaFv.getImagen());
      holder.tvcanLikeFv.setText(String.valueOf(miMascotaFv.getNumLikes())+ " Likes");
-     holder.tvnMascotas.setText(miMascotaFv.getnMascota());
+     //holder.tvnMascotas.setText(miMascotaFv.getnMascota());
      holder.cLikesFv.setImageResource(miMascotaFv.getImagenHue());
 
  }
@@ -59,7 +59,7 @@ public class ContAdapterMisFavoritas extends RecyclerView.Adapter<ContAdapterMis
     imgMascotafv = itemView.findViewById(R.id.imgMascotasFv);
     tvcanLikeFv  = itemView.findViewById(R.id.tvcanLikesCVFv);
     cLikesFv     = itemView.findViewById(R.id.cLikesFv);
-    tvnMascotas  = itemView.findViewById(R.id.tvnombreMascotaCVFv);
+    //tvnMascotas  = itemView.findViewById(R.id.tvnombreMascotaCVFv);
 
    }
   }

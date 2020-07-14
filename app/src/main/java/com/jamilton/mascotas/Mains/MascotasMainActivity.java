@@ -15,6 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import com.jamilton.mascotas.ActivityAcercaDe;
 import com.jamilton.mascotas.ActivityContacto;
+import com.jamilton.mascotas.ActivityCuenta;
 import com.jamilton.mascotas.R;
 import com.jamilton.mascotas.adapter.PageAdapter;
 import com.jamilton.mascotas.Mains.Favoritas;
@@ -110,6 +111,11 @@ public class MascotasMainActivity extends AppCompatActivity {
             case R.id.mSettings:
                 Intent intent2 = new Intent(this, ActivityAcercaDe.class);
                 startActivity(intent2);
+                break;
+
+            case R.id.ConfiCuenta:
+                Intent intent3 = new Intent(this, ActivityCuenta.class);
+                startActivity(intent3);
                 break;
 
         }
