@@ -24,6 +24,10 @@
         android:title="Configuracion de Cuenta"
         android:orderInCategory="102"/>
 
+    <item
+        android:id="@+id/activarNotificaciones"
+        android:title="Activar Notificaciones"
+        android:orderInCategory="103"/>
 
 
 </menu>

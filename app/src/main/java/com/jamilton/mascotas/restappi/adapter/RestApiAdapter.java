@@ -17,7 +17,8 @@ public class RestApiAdapter {
                 .baseUrl(ConstResApi.ROOT_URL )
                 //.addConverterFactory(GsonConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
+                .build()
+                ;
         //generamos la llamada y dejamos inicializado el retrofit
         return retrofit.create(EndPointsAppi.class);
     }
@@ -29,4 +30,23 @@ public class RestApiAdapter {
         return gsonBuilder.create();
 
     }
+
+    public EndPointsAppi conexionInstagramRecuperarId(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstResApi.ROOT_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                ;
+        return retrofit.create(EndPointsAppi.class);
+    }
+
+    public EndPointsAppi establecerConexionRestAPI(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstResApi.ROOT_URLM)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                ;
+        return retrofit.create(EndPointsAppi.class);
+    }
+
 }

@@ -32,7 +32,7 @@ public class MiMascotaM {
         return idM;
     }
 
-    public void setIdM(String id) {
+    public void setIdM(String idM) {
         this.idM = idM;
     }
 

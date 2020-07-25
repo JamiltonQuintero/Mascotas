@@ -1,11 +1,14 @@
-package com.jamilton.mascotas;
+package com.jamilton.mascotas.Mains;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.jamilton.mascotas.R;
 
 
 public class ActivityContacto extends AppCompatActivity {
@@ -27,9 +30,7 @@ public class ActivityContacto extends AppCompatActivity {
 
 
     }
-    public void enviarMail(View view){
 
-       // EditText ETEmail = findViewById(R.id.);
-    }
+
 
 }

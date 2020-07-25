@@ -25,8 +25,8 @@ public class ConstructorDeMascotas {
     public ArrayList<Mascotas> obtenerFavoritas(){
 
 
-            miMascotasFv = obtenerDatos();
-            return miMascotasFv;
+        miMascotasFv = obtenerDatos();
+        return miMascotasFv;
     }
 
 

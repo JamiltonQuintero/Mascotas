@@ -1,3 +1,4 @@
+
 package com.jamilton.mascotas.fragments;
 
 import android.os.Bundle;
@@ -25,7 +26,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 
-public class MiMascota extends Fragment implements IReciclerMiMascotaView {
+public class
+MiMascota extends Fragment implements IReciclerMiMascotaView {
 
         ArrayList<MiMascotaM> miMascota;
         private RecyclerView lstmiMascotas;
