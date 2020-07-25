@@ -1,3 +1,4 @@
+
 package com.jamilton.mascotas.presentador;
 
 import android.content.Context;
@@ -50,34 +51,32 @@ public class RecyclerMiMascotasViewPresenter implements IRecyclerMiMascotasViewP
     }*/
 
 
-
     @Override
     public void obtenerInformacionMedia() {
-        // en este metodoe stamos estableciendo la conexion al servidor
         RestApiAdapter restApiAdapter = new RestApiAdapter();
         Gson gsonRecent = restApiAdapter.construyeGsonDeserialziador();
-        EndPointsAppi endPointsAppi =  restApiAdapter.establecerConexionRestApiInstagram(gsonRecent);
-
+        EndPointsAppi endPointsAppi = restApiAdapter.establecerConexionRestApiInstagram(gsonRecent);
         Call<MascotaResponsive> mascotaResponsive = endPointsAppi.getInformationMedia();
 
         mascotaResponsive.enqueue(new Callback<MascotaResponsive>() {
             @Override
             public void onResponse(Call<MascotaResponsive> call, Response<MascotaResponsive> response) {
-               MascotaResponsive mascotaResponsive = response.body();
-               miMascota = mascotaResponsive.getMiMascotaM();
-               mostrarMiMascota();
-               nombrePerfil();
-               imagenPerfil();
-
+                MascotaResponsive mascotaResponsive1 = response.body();
+                miMascota = mascotaResponsive1.getMiMascotaM();
+                mostrarMiMascota();
+                nombrePerfil();
+                imagenPerfil();
             }
 
             @Override
             public void onFailure(Call<MascotaResponsive> call, Throwable t) {
-                Toast.makeText(contextMM, "Fallo la conexion, por favor intenta de nuevo", Toast.LENGTH_LONG).show();
-                Log.e("FALLO LA CONEXION", t.toString());
+                Toast.makeText(contextMM, "Fallo la conexion, por favor intenta de nuevo", Toast.LENGTH_SHORT).show();
+                Log.e("Fallo la conexion", t.toString());
             }
         });
     }
+
+
 
     @Override
     public void imagenPerfil() {

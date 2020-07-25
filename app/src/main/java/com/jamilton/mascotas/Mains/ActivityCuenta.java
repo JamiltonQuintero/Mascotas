@@ -1,28 +1,21 @@
-package com.jamilton.mascotas;
+package com.jamilton.mascotas.Mains;
 
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.PopupMenu;
-import android.widget.Toast;
+import com.jamilton.mascotas.R;
 
-public class ActivityAcercaDe extends AppCompatActivity {
+public class ActivityCuenta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acerca_de);
+        setContentView(R.layout.confi_cuenta);
 
         Toolbar mitoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(mitoolbar);
-        getSupportActionBar().setTitle("Acerca De");
+        getSupportActionBar().setTitle("Cuenta");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
     }
-
-
 }

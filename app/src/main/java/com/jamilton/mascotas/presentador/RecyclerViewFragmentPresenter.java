@@ -16,18 +16,18 @@ public class RecyclerViewFragmentPresenter implements IRecyclerViewFragmentPrese
     private ArrayList<Mascotas>mascotas;
 
     public RecyclerViewFragmentPresenter(IReciclerViewFragmentView iReciclerViewFragmentView, Context context) {
-       this.iReciclerViewFragmentView = iReciclerViewFragmentView;
-       this.context = context;
-       obtenerContactosDeLaBaseDeDatos();
+        this.iReciclerViewFragmentView = iReciclerViewFragmentView;
+        this.context = context;
+        obtenerContactosDeLaBaseDeDatos();
     }
 
 
     @Override
     public void obtenerContactosDeLaBaseDeDatos() {
 
-       constructorDeMascotas = new ConstructorDeMascotas(context);
-       mascotas = constructorDeMascotas.obtenerDatos();
-       mostrarMascotaRV();
+        constructorDeMascotas = new ConstructorDeMascotas(context);
+        mascotas = constructorDeMascotas.obtenerDatos();
+        mostrarMascotaRV();
     }
 
     @Override

@@ -10,7 +10,13 @@ public final class ConstResApi {
 
     public static final String KEY_GET_INFORMATION_USER = "me/media?fields=id,media_url,caption,timestamp,media_type,permalink,thumbnail_url,username";
 
+    public static final String KEY_GET_INFOR_ID = "me?fields=ig_id";//account_type,id,ig_id,media_count,username
+
     public static final String URL_GET_INFORMATION_USER = KEY_GET_INFORMATION_USER + KEY_ACCES_TOKEN + ACCES_TOKEN;
 
+    public static final String URL_GET_ID_INSTAGRAM = KEY_GET_INFOR_ID + KEY_ACCES_TOKEN + ACCES_TOKEN;
 
+    public static final String ROOT_URLM   = "https://morning-cove-80794.herokuapp.com/";
+
+    public static final String KEY_POST_ID = "registrar-usuario/";
 }

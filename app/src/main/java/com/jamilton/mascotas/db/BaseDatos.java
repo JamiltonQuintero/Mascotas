@@ -66,8 +66,8 @@ public class BaseDatos extends SQLiteOpenHelper {
             mascotaActual.setImagen(registros.getInt(2));
 
             String queryLikes = "SELECT COUNT("+ConstantesBaseDeDatos.TABLE_LIKES_MASCOTAS_NUMERO_LIKES+") as likes" +
-                                " FROM " + ConstantesBaseDeDatos.TABLE_LIKES_MASCOTAS +
-                                " WHERE " + ConstantesBaseDeDatos.TABLE_LIKES_MASCOTAS_ID_MASCOTA + "=" + mascotaActual.getId();
+                    " FROM " + ConstantesBaseDeDatos.TABLE_LIKES_MASCOTAS +
+                    " WHERE " + ConstantesBaseDeDatos.TABLE_LIKES_MASCOTAS_ID_MASCOTA + "=" + mascotaActual.getId();
 
             Cursor registrosLikes = sqLiteDatabase.rawQuery(queryLikes, null);
 
@@ -89,6 +89,8 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         return mascotas;
     }
+
+
 
     public void insertarMascotas(ContentValues contentValues) {
         SQLiteDatabase database = this.getWritableDatabase();

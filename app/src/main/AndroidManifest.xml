@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jamilton.mascotas">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".ActivityAcercaDe"
-            android:parentActivityName=".Mains.MascotasMainActivity">
-
-
-        </activity>
-
-        <activity android:name=".ActivityContacto"
-            android:parentActivityName=".Mains.MascotasMainActivity"/>
-
-        <activity android:name=".ActivityCuenta"
-            android:parentActivityName=".Mains.MascotasMainActivity">
-
-        </activity>
+        <activity android:name=".Mains.Notificaciones"></activity>
+        <activity
+            android:name=".Mains.ActivityAcercaDe"
+            android:parentActivityName=".Mains.MascotasMainActivity" />
+        <activity
+            android:name=".Mains.ActivityContacto"
+            android:parentActivityName=".Mains.MascotasMainActivity" />
+        <activity
+            android:name=".Mains.ActivityCuenta"
+            android:parentActivityName=".Mains.MascotasMainActivity" />
         <activity
             android:name=".Mains.MascotasMainActivity"
             android:label="@string/app_name">

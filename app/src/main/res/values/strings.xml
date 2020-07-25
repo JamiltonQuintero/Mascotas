@@ -28,4 +28,5 @@
     <string name="tvconfi_cuenta">MASCOTAS</string>
     <string name="buscar_usiario">Escribe tu Usuario</string>
     <string name="btn_cuenta">Guardar Cuenta</string>
+    <string name="btn_notificaciones">Activaste Las Notificaciones</string>
 </resources>
